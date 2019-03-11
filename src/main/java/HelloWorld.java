@@ -12,12 +12,14 @@ public class HelloWorld extends HttpServlet {
   {
       // Set response content type
       response.setContentType("text/html");
-
+      
       // Actual logic goes here.
       PrintWriter out = response.getWriter();
-
+      
       out.println("<h1>Hello World</h1>");
       out.println("<h2>" + new HelloWorldHelper().getMessage() + "</h2>");
+      for(int i=0;i<20;i++)
+         out.println("<p>" + i + "</p>");
   }
 
   public void destroy()
